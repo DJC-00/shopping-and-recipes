@@ -1,4 +1,5 @@
+<app-header (viewNumberChanged)="changeView($event)"></app-header>
 <div class="container">
-    <app-recipes></app-recipes>
-    <app-shopping-list></app-shopping-list>
+    <app-recipes *ngIf="currentView == 0" ></app-recipes>
+    <app-shopping-list *ngIf="currentView == 1" ></app-shopping-list>
 </div>
