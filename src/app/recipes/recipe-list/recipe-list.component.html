@@ -1,1 +1,16 @@
-<app-recipe-item></app-recipe-item>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<hr>
+<div *ngFor="let recipe of allRecipes" class="row pb-2">
+    <!-- <app-recipe-item
+      [oneRecipe]="recipe"
+      (onNewRecipeSelect)="list_onNewRecipeSelect($event)"
+    ></app-recipe-item> -->
+    <app-recipe-item
+    [oneRecipe]="recipe"
+    (onNewRecipeSelect)="list_onNewRecipeSelect(recipe.id)"
+    ></app-recipe-item>
+</div>

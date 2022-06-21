@@ -1,1 +1,27 @@
-<h1>Header Component</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary py-2 px-4 mb-3">
+    <a class="navbar-brand" href="#">Recipe App</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#" (click)="changeViewNumber(0)" [ngClass]="{'active': activePage == 0}">Recipes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" (click)="changeViewNumber(1)" [ngClass]="{'active': activePage == 1}">Shopping List</a>
+            </li>
+        </ul>
+    </div>
+    <div class="div">
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+</nav>

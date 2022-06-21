@@ -1,7 +1,20 @@
-<div class="row">
-    <div class="">
-        <app-shopping-edit></app-shopping-edit>
-        <hr>
-        <h3>Shopping List</h3>
-    </div>
+
+<div class="py-2">
+  <hr />
+  <app-shopping-edit></app-shopping-edit>
+  <div class="list-group py-2">
+    <a
+      href="#"
+      class="list-group-item d-flex row-xs-12 align-items-center py-2"
+      style="cursor: pointer"
+      *ngFor="let ingredient of allIngerdients"
+      >
+      <div class="col-3">{{ ingredient.name }}</div>
+      <div class="col-8">{{ ingredient.quantity }}</div>
+      <div class="col-1">
+        <button type="button" class="btn btn-outline-danger float-end">X</button>
+      </div>
+    </a>
+  </div>
 </div>
+

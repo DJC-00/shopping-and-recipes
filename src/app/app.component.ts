@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shopping-and-recipes';
+  currentView: number = 0
+
+  changeView(newViewNumber: number){
+    this.currentView = newViewNumber
+  }
 }

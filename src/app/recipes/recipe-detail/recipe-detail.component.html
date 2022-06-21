@@ -1,1 +1,39 @@
-<p>recipe-detail works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="card">
+      <img src="{{ detailsCurrentRecipe.imageURL }}" alt="..."
+      class="card-img-top overflow-hidden" alt="..."
+      style="width: 100%; height: 100%; object-fit: cover; max-height:200px">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-content-center">
+          <h5 class="card-title">{{this.detailsCurrentRecipe.name}}</h5>
+          <button class="btn btn-outline-secondary dropdown">Manage Recipe</button>
+        </div>
+        <p>cooktime</p>
+        <ul *ngIf="this.detailsCurrentRecipe.ingerdients != undefined">
+          <li *ngFor="let oneIngerdient of this.detailsCurrentRecipe.ingerdients">
+            <p>{{oneIngerdient.name}} {{oneIngerdient.quantity}}</p>
+          </li>
+
+        </ul>
+        <ul *ngIf="this.detailsCurrentRecipe.ingerdients === undefined">
+          <li>
+            <p>Ingredients</p>
+          </li>
+          <li>
+            <p>Ingredients</p>
+          </li>
+          <li>
+            <p>Ingredients</p>
+          </li>
+          <li>
+            <p>Ingredients</p>
+          </li>
+        </ul>
+        <hr>
+        <p>{{this.detailsCurrentRecipe.description}}</p>
+        <a href="#" class="btn btn-outline-success">Shop This Recipe</a>
+      </div>
+    </div>
+  </div>
+</div>
