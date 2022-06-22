@@ -4,16 +4,24 @@
       <div class="row">
         <div class="col-sm-5 form-group">
           <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Ingredient name">
+          <input type="text"
+          class="form-control"
+          id="name"
+          placeholder="Ingredient name"
+          #ingredientName>
         </div>
         <div class="col-sm-2 form-group">
           <label for="quantity">Quantity</label>
-          <input type="text" class="form-control" id="quantity" placeholder="Amount">
+          <input type="text"
+          class="form-control"
+          id="quantity"
+          placeholder="Amount"
+          #ingredientQuantity>
         </div>
       </div>
       <div class="row mt-2">
         <div class="col-xs-12">
-          <button class="btn btn-success me-2" type="submit">Add</button>
+          <button class="btn btn-success me-2" type="button" (click)="onIngredientAdded()">Add</button>
           <button class="btn btn-secondary me-2" type="submit">Clear</button>
         </div>
       </div>
